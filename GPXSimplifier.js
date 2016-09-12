@@ -70,7 +70,7 @@ gpxParse.parseGpxFromFile(inFilename, function (error, data) {
         for (pointNum = 0; pointNum < points.length; pointNum++) {
             //noinspection JSDuplicatedDeclaration
             var tmPoint = points[pointNum];
-            var time = new Date(point.time).toISOString();
+            var time = new Date(tmPoint.time).toISOString();
             out += '<trkpt lat="' + tmPoint.lat + '" lon="' + tmPoint.lon
                 + '"\n\n<time>' + time + '</time>\n'
                 + '<ele>' + tmPoint.elevation + '</ele></trkpt>\n';
